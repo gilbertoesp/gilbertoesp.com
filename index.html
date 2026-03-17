@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>gilbertoesp — Understanding with you</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Barlow+Condensed:wght@300;400;600;700&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAV
+════════════════════════════════ -->
+<nav>
+  <div class="nav-logo"><span>@</span>gilbertoesp</div>
+
+  <!-- Hamburger toggle (mobile only) -->
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Navigation links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about"    onclick="closeNav()">About</a></li>
+    <li><a href="#services" onclick="closeNav()">Services</a></li>
+    <li><a href="#process"  onclick="closeNav()">Process</a></li>
+    <li><a href="#contact"  onclick="closeNav()">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════
+     HERO
+════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// Gilberto Espinoza &nbsp;·&nbsp; Tech Consultant &amp; Data Analyst</p>
+    <h1 class="hero-name">
+      <span class="at">@</span>gilberto<span class="dim">esp</span>
+    </h1>
+    <p class="hero-tagline">"Understanding with you."</p>
+    <p class="hero-sub">
+      The tech landscape is overwhelming and uncertain. I bring orientation,
+      clarity, and data-driven insight — so you make smarter decisions and
+      actually understand what's happening in your business.
+    </p>
+    <div class="hero-cta-row">
+      <a href="#services" class="btn-primary">See my services</a>
+      <a href="#contact"  class="btn-secondary">Let's talk</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     TICKER
+════════════════════════════════ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>Data Analysis</span><span class="ticker-sep">◆</span>
+    <span>Análisis de Datos</span><span class="ticker-sep">◆</span>
+    <span>Web Development</span><span class="ticker-sep">◆</span>
+    <span>Desarrollo Web</span><span class="ticker-sep">◆</span>
+    <span>Market Research</span><span class="ticker-sep">◆</span>
+    <span>Investigación de Mercado</span><span class="ticker-sep">◆</span>
+    <span>Content Strategy</span><span class="ticker-sep">◆</span>
+    <span>Estrategia de Contenido</span><span class="ticker-sep">◆</span>
+    <span>Tech Clarity</span><span class="ticker-sep">◆</span>
+    <span>Claridad Tecnológica</span><span class="ticker-sep">◆</span>
+    <!-- duplicate for seamless loop -->
+    <span>Data Analysis</span><span class="ticker-sep">◆</span>
+    <span>Análisis de Datos</span><span class="ticker-sep">◆</span>
+    <span>Web Development</span><span class="ticker-sep">◆</span>
+    <span>Desarrollo Web</span><span class="ticker-sep">◆</span>
+    <span>Market Research</span><span class="ticker-sep">◆</span>
+    <span>Investigación de Mercado</span><span class="ticker-sep">◆</span>
+    <span>Content Strategy</span><span class="ticker-sep">◆</span>
+    <span>Estrategia de Contenido</span><span class="ticker-sep">◆</span>
+    <span>Tech Clarity</span><span class="ticker-sep">◆</span>
+    <span>Claridad Tecnológica</span><span class="ticker-sep">◆</span>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════
+     ABOUT
+════════════════════════════════ -->
+<section id="about">
+  <div class="about-wrap">
+
+    <div class="about-left reveal">
+      <p class="section-label">// 01 — About / Sobre mí</p>
+      <h2 class="section-title">Tech insight<br/>made human.</h2>
+      <p class="section-sub">
+        I'm Gilberto Espinoza — a computer scientist, analyst, and entrepreneur.
+        I help businesses and founders navigate the uncertainty of modern
+        technology with grounded data, honest advice, and real solutions.
+      </p>
+      <br/>
+      <p class="section-sub">
+        Soy Gilberto Espinoza — científico en computación, analista y
+        emprendedor. Ayudo a empresas y fundadores a navegar la incertidumbre
+        tecnológica con datos concretos, asesoría honesta y soluciones reales.
+      </p>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="stat-grid">
+        <div class="stat-cell">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Languages / Idiomas</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Curiosity / Curiosidad</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Honest insight</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ═══════════════════════════════
+     SERVICES
+════════════════════════════════ -->
+<section id="services" class="services-bg">
+
+  <div class="services-intro reveal">
+    <div>
+      <p class="section-label">// 02 — Services / Servicios</p>
+      <h2 class="section-title">What I do<br/>for you.</h2>
+    </div>
+    <div>
+      <p class="section-sub">
+        Every service is delivered with transparency and context. You don't
+        just get a deliverable — you get the understanding behind it.
+        <em>No solo recibes un resultado, entiendes el porqué.</em>
+      </p>
+    </div>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <div class="service-title">Data &amp; Statistics</div>
+      <div class="service-title-es">Datos y Estadística</div>
+      <p class="service-desc">
+        I transform raw numbers into clear narratives. From descriptive stats
+        to predictive models — I make data tell you what your business needs.
+      </p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">02</span>
+      <div class="service-title">Web Development</div>
+      <div class="service-title-es">Desarrollo Web</div>
+      <p class="service-desc">
+        Custom websites and web applications built with real code. Clean
+        architecture, fast performance, and designed to convert visitors into clients.
+      </p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">03</span>
+      <div class="service-title">Market Research</div>
+      <div class="service-title-es">Investigación de Mercado</div>
+      <p class="service-desc">
+        I study what your customers actually need. Surveys, data collection,
+        competitor analysis, and structured insights to guide your strategy.
+      </p>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">04</span>
+      <div class="service-title">Content Strategy</div>
+      <div class="service-title-es">Estrategia de Contenido</div>
+      <p class="service-desc">
+        Bilingual content that leads to customers. Posts, campaigns, and digital
+        presence managed with a clear audience strategy — not guesswork.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════
+     DATA SECTION
+════════════════════════════════ -->
+<section class="data-section">
+  <div class="data-wrap">
+
+    <div class="reveal">
+      <p class="section-label">// 03 — The Data Advantage</p>
+      <h2 class="section-title">Numbers don't lie.<br/>But they need context.</h2>
+      <p class="section-sub" style="margin-bottom:1.4rem;">
+        Most businesses have data they don't use. I turn that into structured
+        insight — so decisions are based on evidence, not guesses.
+      </p>
+      <p class="section-sub">
+        La mayoría de los negocios tienen datos que no usan. Los convierto en
+        claridad — para que las decisiones se tomen con evidencia, no suposiciones.
+      </p>
+    </div>
+
+    <div class="reveal">
+      <div class="mini-chart">
+        <div class="chart-label">// Business clarity score — before vs. after</div>
+        <div class="bars">
+          <div style="flex:1">
+            <div class="bar" style="height:100px"><div class="bar-fill" style="height:28%"></div></div>
+            <div class="bar-label">Before</div>
+          </div>
+          <div style="flex:1">
+            <div class="bar" style="height:100px"><div class="bar-fill" style="height:85%"></div></div>
+            <div class="bar-label">After</div>
+          </div>
+          <div style="flex:1">
+            <div class="bar" style="height:100px"><div class="bar-fill" style="height:42%"></div></div>
+            <div class="bar-label">Avg. market</div>
+          </div>
+          <div style="flex:1">
+            <div class="bar" style="height:100px"><div class="bar-fill" style="height:92%"></div></div>
+            <div class="bar-label">gilbertoesp</div>
+          </div>
+        </div>
+      </div>
+      <div class="line-chart">
+        <div class="chart-label">// Revenue trend — typical client trajectory</div>
+        <svg class="sparkline" viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#f0a500"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </linearGradient>
+          </defs>
+          <polyline
+            points="0,55 40,50 80,42 120,35 160,25 200,18 240,10 300,4"
+            fill="none" stroke="#f0a500" stroke-width="2" stroke-linejoin="round"
+          />
+          <polyline
+            points="0,55 40,50 80,42 120,35 160,25 200,18 240,10 300,4 300,60 0,60"
+            fill="url(#grad)" stroke="none" opacity="0.12"
+          />
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     PROCESS
+════════════════════════════════ -->
+<section id="process">
+  <div class="reveal">
+    <p class="section-label">// 04 — How I Work / Cómo trabajo</p>
+    <h2 class="section-title">From question<br/>to clarity.</h2>
+  </div>
+
+  <div class="process-wrap reveal">
+    <div class="process-step">
+      <div class="process-step-num">01</div>
+      <div class="process-step-title">Listen</div>
+      <div class="process-step-es">Escuchar</div>
+      <p>I start by understanding your business, your goals, and what's actually confusing or broken right now.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-num">02</div>
+      <div class="process-step-title">Analyze</div>
+      <div class="process-step-es">Analizar</div>
+      <p>I dig into your data, your market, and your tech stack. I find patterns and problems most people miss.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-num">03</div>
+      <div class="process-step-title">Build</div>
+      <div class="process-step-es">Construir</div>
+      <p>Whether it's a dashboard, a website, or a content plan — I deliver real, working solutions. No fluff.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-step-num">04</div>
+      <div class="process-step-title">Explain</div>
+      <div class="process-step-es">Explicar</div>
+      <p>I make sure you understand everything. The insight is yours to keep — not locked in a black box.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     BILINGUAL BANNER
+════════════════════════════════ -->
+<div class="bilingual-banner reveal">
+  <div class="left">
+    <h2>Ready to make sense of your data?<br/><br/>¿Listo para entender tu negocio con datos?</h2>
+  </div>
+  <div class="right">
+    <p>Whether you're a startup, a growing SME, or just someone who's tired
+       of guessing — I can help you go from confusion to clarity.</p>
+    <p>Ya sea que tengas una startup, un negocio en crecimiento, o simplemente
+       estés cansado de adivinar — puedo llevarte de la confusión a la claridad.</p>
+    <a href="#contact" class="btn-dark">Start a conversation / Conversemos →</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     CONTACT
+════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-wrap">
+
+    <div class="reveal">
+      <p class="section-label">// 05 — Contact / Contacto</p>
+      <h2 class="section-title">Let's work<br/>together.</h2>
+      <p class="section-sub" style="margin-bottom:2rem;">
+        I'm open to freelance projects, consulting, and long-term partnerships.
+        Bilingual — reach out in whatever feels natural.
+      </p>
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-item-label">Location</div>
+          <div class="contact-item-val">Nogales, Sonora, México</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <div class="contact-item-label">Socials</div>
+          <div class="contact-item-val">@gilbertoesp</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="contact-item-label">Languages</div>
+          <div class="contact-item-val">English &amp; Español</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="form-group">
+        <label>Your name / Tu nombre</label>
+        <input type="text" placeholder="e.g. María García" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@company.com" />
+      </div>
+      <div class="form-group">
+        <label>Service of interest / Servicio de interés</label>
+        <select>
+          <option value="">Select one...</option>
+          <option>Data &amp; Statistics / Datos y Estadística</option>
+          <option>Web Development / Desarrollo Web</option>
+          <option>Market Research / Investigación de Mercado</option>
+          <option>Content Strategy / Estrategia de Contenido</option>
+          <option>Other / Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message / Mensaje</label>
+        <textarea placeholder="Tell me about your project... / Cuéntame sobre tu proyecto..."></textarea>
+      </div>
+      <button class="btn-submit" id="submit-btn">
+        Send message / Enviar →
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     FOOTER
+════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">@gilbertoesp</div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 Gilberto Espinoza. Understanding with you.</div>
+</footer>
+
+<!-- ═══════════════════════════════
+     SCRIPTS
+════════════════════════════════ -->
+<script>
+  /* ── Hamburger menu ── */
+  const toggle   = document.querySelector('.nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  function closeNav() {
+    navLinks.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  /* ── Scroll reveal ── */
+  const reveals  = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+        observer.unobserve(el.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  /* ── Contact form placeholder ── */
+  document.getElementById('submit-btn').addEventListener('click', () => {
+    alert('¡Gracias! I\'ll be in touch soon.\n¡Gracias! Estaré en contacto pronto.');
+  });
+</script>
+</body>
+</html>
