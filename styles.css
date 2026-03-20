@@ -328,7 +328,7 @@ nav {
 .hero-name {
   font-family:    var(--font-display);
   font-weight:    800; 
-  font-size:      clamp(2rem, 9vw, 9rem);
+  font-size:      clamp(2rem, 9vw, 7rem);
   line-height:    0.92;
   letter-spacing: -0.045em;
   margin-bottom:  0.3em;
@@ -762,8 +762,8 @@ footer {
   .hero-grid-bg { background-size: 64px 64px; }
   .hero-sub    { font-size: 1.2rem; }
 
-  .about-wrap  { gap: 7rem; }
-  .stat-number { font-size: 3.8rem; }
+  .about-wrap  { gap: 1rem; }
+  .stat-number { font-size: 1.6rem; }
   .services-intro { gap: 4rem; }
   .service-card { padding: 3rem 2.5rem; }
   .service-title { font-size: 1.6rem; }
@@ -771,7 +771,7 @@ footer {
   .data-wrap {
     display:               grid;
     grid-template-columns: 1fr 1.1fr;
-    gap:                   6rem;
+    gap:                   5rem;
     align-items:           center;
     flex-direction:        unset;
   }
@@ -782,7 +782,7 @@ footer {
   .process-step:last-child    { border-right: none; }
   .process-step:nth-child(2n) { border-right: 1px solid var(--border); }
 
-  .contact-wrap { gap: 7rem; }
+  .contact-wrap { gap: 1rem; }
   footer        { justify-content: space-between; }
   .divider      { margin: 0 var(--section-px); }
 }
@@ -794,5 +794,5 @@ footer {
 @media (min-width: 1280px) {
   :root { --section-px: 7rem; --section-py: 10rem; }
   .about-wrap { gap: 9rem; }
-  .hero-name  { font-size: clamp(5rem, 12vw, 10rem); }
+  .hero-name  { font-size: clamp(3rem, 8vw, 10rem); }
 }
