@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — gilbertoesp</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Barlow+Condensed:wght@300;400;600;700&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAV
+════════════════════════════════ -->
+<nav>
+  <a href="index.html" class="nav-logo"><span>@</span>gilbertoesp</a>
+
+  <div class="nav-right">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="blog.html"      data-i18n="nav.blog"      aria-current="page" onclick="closeNav()">Blog</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio" onclick="closeNav()">Portfolio</a></li>
+      <li><a href="material.html"  data-i18n="nav.material"  onclick="closeNav()">Material</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact" onclick="closeNav()">Contact</a></li>
+    </ul>
+
+    <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar a español">
+      <span class="flag-emoji" id="flag-to-es">🇲🇽</span>
+      <span class="flag-emoji" id="flag-to-en">🇺🇸</span>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <span class="icon-moon">🌙</span>
+      <span class="icon-sun">☀️</span>
+    </button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════
+     PAGE HERO
+════════════════════════════════ -->
+<div class="page-hero">
+  <p class="section-label" data-i18n="blog.label"></p>
+  <h1 class="section-title" data-i18n="blog.title"></h1>
+  <p class="section-sub" data-i18n="blog.sub"></p>
+</div>
+
+<!-- ═══════════════════════════════
+     FILTER
+════════════════════════════════ -->
+<div class="filter-row">
+  <button class="filter-btn active" data-filter="all"      data-i18n="blog.filter.all">All</button>
+  <button class="filter-btn"        data-filter="data"     data-i18n="blog.filter.data">Data</button>
+  <button class="filter-btn"        data-filter="web"      data-i18n="blog.filter.web">Web</button>
+  <button class="filter-btn"        data-filter="strategy" data-i18n="blog.filter.strategy">Strategy</button>
+</div>
+
+<!-- ═══════════════════════════════
+     POSTS
+════════════════════════════════ -->
+<div class="posts-grid">
+
+  <article class="post-card reveal" data-category="data">
+    <div class="post-meta">
+      <span class="post-date">2025-05-12</span>
+      <span class="post-tag">Data</span>
+    </div>
+    <h2 class="post-title">Why most small businesses ignore their own data — and how to fix it</h2>
+    <p class="post-excerpt">You have more data than you think. The problem is rarely a lack of information; it's a lack of structure to make sense of it. Here's a simple framework to start.</p>
+    <a href="#" class="post-read">Read →</a>
+  </article>
+
+  <article class="post-card reveal" data-category="web">
+    <div class="post-meta">
+      <span class="post-date">2025-04-28</span>
+      <span class="post-tag">Web</span>
+    </div>
+    <h2 class="post-title">The case for vanilla: building fast websites without a framework</h2>
+    <p class="post-excerpt">Frameworks are tools, not requirements. Sometimes the clearest path to a performant, maintainable website is fewer dependencies and more intentionality.</p>
+    <a href="#" class="post-read">Read →</a>
+  </article>
+
+  <article class="post-card reveal" data-category="strategy">
+    <div class="post-meta">
+      <span class="post-date">2025-04-10</span>
+      <span class="post-tag">Strategy</span>
+    </div>
+    <h2 class="post-title">Bilingual content isn't translation — it's a different conversation</h2>
+    <p class="post-excerpt">Translating your content word-for-word misses the point. Each language carries its own cultural register and audience expectations. Here's how I think about it.</p>
+    <a href="#" class="post-read">Read →</a>
+  </article>
+
+  <article class="post-card reveal" data-category="data">
+    <div class="post-meta">
+      <span class="post-date">2025-03-22</span>
+      <span class="post-tag">Data</span>
+    </div>
+    <h2 class="post-title">Descriptive statistics are underrated — a practical guide</h2>
+    <p class="post-excerpt">Before you reach for machine learning, have you fully understood your mean, median, and standard deviation? Most business questions live in descriptive stats.</p>
+    <a href="#" class="post-read">Read →</a>
+  </article>
+
+  <article class="post-card reveal" data-category="strategy">
+    <div class="post-meta">
+      <span class="post-date">2025-03-05</span>
+      <span class="post-tag">Strategy</span>
+    </div>
+    <h2 class="post-title">What is market research, really? (And why most people do it wrong)</h2>
+    <p class="post-excerpt">Sending a Google Form to your WhatsApp contacts is not market research. Here's what rigorous, useful research actually looks like for small teams.</p>
+    <a href="#" class="post-read">Read →</a>
+  </article>
+
+  <article class="post-card reveal" data-category="web">
+    <div class="post-meta">
+      <span class="post-date">2025-02-14</span>
+      <span class="post-tag">Web</span>
+    </div>
+    <h2 class="post-title">CSS custom properties changed how I think about design systems</h2>
+    <p class="post-excerpt">Once you internalize CSS variables as a design token layer, theming, consistency, and dark mode become trivially easy. Here's the mental model.</p>
+    <a href="#" class="post-read">Read →</a>
+  </article>
+
+</div>
+
+<!-- ═══════════════════════════════
+     FOOTER
+════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">@gilbertoesp</div>
+  <ul class="footer-links">
+    <li><a href="blog.html"      data-i18n="nav.blog"></a></li>
+    <li><a href="portfolio.html" data-i18n="nav.portfolio"></a></li>
+    <li><a href="material.html"  data-i18n="nav.material"></a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact"></a></li>
+  </ul>
+  <div class="footer-copy" data-i18n="footer.copy"></div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

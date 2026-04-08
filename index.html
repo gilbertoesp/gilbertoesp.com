@@ -16,34 +16,28 @@
      NAV
 ════════════════════════════════ -->
 <nav>
-  <div class="nav-logo"><span>@</span>gilbertoesp</div>
+  <a href="index.html" class="nav-logo" aria-current="page"><span>@</span>gilbertoesp</a>
 
   <div class="nav-right">
     <ul class="nav-links" id="nav-links">
-    <li><a href="#about"    data-i18n="nav.about"    onclick="closeNav()">About</a></li>
-    <li><a href="#services" data-i18n="nav.services" onclick="closeNav()">Services</a></li>
-    <li><a href="#process"  data-i18n="nav.process"  onclick="closeNav()">Process</a></li>
-    <li><a href="#contact"  data-i18n="nav.contact"  onclick="closeNav()">Contact</a></li>
-  </ul>
-    <!-- Language toggle: shows the flag you SWITCH TO -->
+      <li><a href="blog.html"      data-i18n="nav.blog"      onclick="closeNav()">Blog</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio" onclick="closeNav()">Portfolio</a></li>
+      <li><a href="material.html"  data-i18n="nav.material"  onclick="closeNav()">Material</a></li>
+      <li><a href="#contact"       data-i18n="nav.contact"   onclick="closeNav()">Contact</a></li>
+    </ul>
+
     <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
       <span class="flag-emoji" id="flag-to-es">🇲🇽</span>
       <span class="flag-emoji" id="flag-to-en">🇺🇸</span>
     </button>
-
-    <!-- Theme toggle -->
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
       <span class="icon-moon">🌙</span>
       <span class="icon-sun">☀️</span>
     </button>
-
-    <!-- Hamburger (mobile only) -->
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
-
-  
 </nav>
 
 <!-- ═══════════════════════════════
@@ -79,35 +73,10 @@
      ABOUT
 ════════════════════════════════ -->
 <section id="about">
-  <div class="about-wrap">
-
-    <div class="about-left reveal">
-      <p class="section-label" data-i18n="about.label"></p>
-      <h2 class="section-title" data-i18n="about.title"></h2>
-      <p class="section-sub"   data-i18n="about.body"></p>
-    </div>
-
-    <div class="about-right reveal">
-      <div class="stat-grid">
-        <div class="stat-cell">
-          <div class="stat-number">4+</div>
-          <div class="stat-label" data-i18n="about.stat1"></div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-number">2</div>
-          <div class="stat-label" data-i18n="about.stat2"></div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-number">∞</div>
-          <div class="stat-label" data-i18n="about.stat3"></div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-number">100%</div>
-          <div class="stat-label" data-i18n="about.stat4"></div>
-        </div>
-      </div>
-    </div>
-
+  <div class="about-wrap reveal">
+    <p class="section-label" data-i18n="about.label"></p>
+    <h2 class="section-title" data-i18n="about.title"></h2>
+    <p class="section-sub"   data-i18n="about.body"></p>
   </div>
 </section>
 
@@ -151,67 +120,6 @@
     </div>
   </div>
 
-</section>
-
-<!-- ═══════════════════════════════
-     DATA SECTION
-════════════════════════════════ -->
-<section class="data-section">
-  <div class="data-wrap">
-
-    <div class="reveal">
-      <p class="section-label" data-i18n="data.label"></p>
-      <h2 class="section-title" data-i18n="data.title"></h2>
-      <p class="section-sub"   data-i18n="data.body"></p>
-    </div>
-
-    <div class="reveal">
-      <div class="code-window">
-        <div class="code-titlebar">
-          <span class="code-dot dot-red"></span>
-          <span class="code-dot dot-yellow"></span>
-          <span class="code-dot dot-green"></span>
-          <span class="code-filename">analysis.py</span>
-        </div>
-        <pre class="code-block"><code><span class="c-kw">import</span> <span class="c-mod">pandas</span> <span class="c-kw">as</span> <span class="c-mod">pd</span>
-<span class="c-kw">import</span> <span class="c-mod">matplotlib.pyplot</span> <span class="c-kw">as</span> <span class="c-mod">plt</span>
-
-<span class="c-comment"># Load &amp; clean data</span>
-<span class="c-id">df</span> <span class="c-op">=</span> pd<span class="c-op">.</span>read_csv(<span class="c-str">'sales.csv'</span>,
-         parse_dates<span class="c-op">=</span>[<span class="c-str">'date'</span>])
-<span class="c-id">df</span><span class="c-op">.</span>dropna(subset<span class="c-op">=</span>[<span class="c-str">'revenue'</span>],
-         inplace<span class="c-op">=</span><span class="c-bool">True</span>)
-
-<span class="c-comment"># Monthly totals by segment</span>
-<span class="c-id">monthly</span> <span class="c-op">=</span> (
-  <span class="c-id">df</span><span class="c-op">.</span>groupby([
-    pd<span class="c-op">.</span>Grouper(key<span class="c-op">=</span><span class="c-str">'date'</span>,
-               freq<span class="c-op">=</span><span class="c-str">'ME'</span>),
-    <span class="c-str">'segment'</span>
-  ])[<span class="c-str">'revenue'</span>]
-  <span class="c-op">.</span>sum()
-  <span class="c-op">.</span>unstack(fill_value<span class="c-op">=</span><span class="c-num">0</span>)
-)
-
-<span class="c-comment"># Plot each segment</span>
-<span class="c-id">fig</span>, <span class="c-id">ax</span> <span class="c-op">=</span> plt<span class="c-op">.</span>subplots()
-<span class="c-kw">for</span> <span class="c-id">seg</span> <span class="c-kw">in</span> <span class="c-id">monthly</span><span class="c-op">.</span>columns:
-  <span class="c-id">ax</span><span class="c-op">.</span>plot(
-    <span class="c-id">monthly</span><span class="c-op">.</span>index,
-    <span class="c-id">monthly</span>[<span class="c-id">seg</span>],
-    label<span class="c-op">=</span><span class="c-id">seg</span>,
-    linewidth<span class="c-op">=</span><span class="c-num">2</span>
-  )
-
-<span class="c-id">ax</span><span class="c-op">.</span>set_title(<span class="c-str">'Revenue by Segment'</span>)
-<span class="c-id">ax</span><span class="c-op">.</span>legend()
-<span class="c-id">ax</span><span class="c-op">.</span>grid(alpha<span class="c-op">=</span><span class="c-num">0.3</span>)
-plt<span class="c-op">.</span>tight_layout()
-plt<span class="c-op">.</span>savefig(<span class="c-str">'output.png'</span>)</code></pre>
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <!-- ═══════════════════════════════
@@ -269,7 +177,7 @@ plt<span class="c-op">.</span>savefig(<span class="c-str">'output.png'</span>)</
     <div class="reveal">
       <p class="section-label"  data-i18n="contact.label"></p>
       <h2 class="section-title" data-i18n="contact.title"></h2>
-      <p class="section-sub" style="margin-bottom:2rem;" data-i18n="contact.sub"></p>
+      <p class="section-sub contact-sub" data-i18n="contact.sub"></p>
 
       <div class="contact-item">
         <div class="contact-icon">📍</div>
@@ -282,7 +190,7 @@ plt<span class="c-op">.</span>savefig(<span class="c-str">'output.png'</span>)</
         <div class="contact-icon">🌐</div>
         <div>
           <div class="contact-item-label" data-i18n="contact.soc.label"></div>
-          <div class="contact-item-val"><a href="">@gilbertoesp</a></div>
+          <div class="contact-item-val">@gilbertoesp</div>
         </div>
       </div>
       <div class="contact-item">
@@ -330,10 +238,10 @@ plt<span class="c-op">.</span>savefig(<span class="c-str">'output.png'</span>)</
 <footer>
   <div class="footer-brand">@gilbertoesp</div>
   <ul class="footer-links">
-    <li><a href="#about"    data-i18n="nav.about"></a></li>
-    <li><a href="#services" data-i18n="nav.services"></a></li>
-    <li><a href="#process"  data-i18n="nav.process"></a></li>
-    <li><a href="#contact"  data-i18n="nav.contact"></a></li>
+    <li><a href="blog.html"      data-i18n="nav.blog"></a></li>
+    <li><a href="portfolio.html" data-i18n="nav.portfolio"></a></li>
+    <li><a href="material.html"  data-i18n="nav.material"></a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact"></a></li>
   </ul>
   <div class="footer-copy" data-i18n="footer.copy"></div>
 </footer>

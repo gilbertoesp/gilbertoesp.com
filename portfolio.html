@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — gilbertoesp</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Barlow+Condensed:wght@300;400;600;700&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     NAV
+════════════════════════════════ -->
+<nav>
+  <a href="index.html" class="nav-logo"><span>@</span>gilbertoesp</a>
+
+  <div class="nav-right">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="blog.html"      data-i18n="nav.blog"      onclick="closeNav()">Blog</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio" aria-current="page" onclick="closeNav()">Portfolio</a></li>
+      <li><a href="material.html"  data-i18n="nav.material"  onclick="closeNav()">Material</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact" onclick="closeNav()">Contact</a></li>
+    </ul>
+
+    <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar a español">
+      <span class="flag-emoji" id="flag-to-es">🇲🇽</span>
+      <span class="flag-emoji" id="flag-to-en">🇺🇸</span>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <span class="icon-moon">🌙</span>
+      <span class="icon-sun">☀️</span>
+    </button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════
+     PAGE HERO
+════════════════════════════════ -->
+<div class="page-hero">
+  <p class="section-label" data-i18n="portfolio.label"></p>
+  <h1 class="section-title" data-i18n="portfolio.title"></h1>
+  <p class="section-sub" data-i18n="portfolio.sub"></p>
+</div>
+
+<!-- ═══════════════════════════════
+     PROJECTS
+════════════════════════════════ -->
+<div class="projects-grid">
+
+  <div class="project-card reveal">
+    <div class="project-tags">
+      <span class="project-tag">Python</span>
+      <span class="project-tag">Pandas</span>
+      <span class="project-tag">Matplotlib</span>
+    </div>
+    <h2 class="project-title">Sales Performance Dashboard</h2>
+    <p class="project-desc">Automated monthly sales reporting for a retail SME — cleaned raw POS data, segmented by product category, and produced an executive-ready PDF with trend charts.</p>
+    <a href="#" class="project-link">View case study →</a>
+  </div>
+
+  <div class="project-card reveal">
+    <div class="project-tags">
+      <span class="project-tag">HTML</span>
+      <span class="project-tag">CSS</span>
+      <span class="project-tag">JavaScript</span>
+    </div>
+    <h2 class="project-title">Consulting Firm Website</h2>
+    <p class="project-desc">Designed and built a bilingual (EN/ES) landing page for a Hermosillo-based consultancy. Mobile-first, dark/light mode, and no frameworks — fast by default.</p>
+    <a href="#" class="project-link">View project →</a>
+  </div>
+
+  <div class="project-card reveal">
+    <div class="project-tags">
+      <span class="project-tag">Survey Design</span>
+      <span class="project-tag">R</span>
+      <span class="project-tag">SPSS</span>
+    </div>
+    <h2 class="project-title">Consumer Sentiment Study</h2>
+    <p class="project-desc">Designed and executed a 200-respondent survey for a food brand entering a new regional market. Delivered a full research report with actionable positioning recommendations.</p>
+    <a href="#" class="project-link">View case study →</a>
+  </div>
+
+  <div class="project-card reveal">
+    <div class="project-tags">
+      <span class="project-tag">Content Strategy</span>
+      <span class="project-tag">SEO</span>
+      <span class="project-tag">Analytics</span>
+    </div>
+    <h2 class="project-title">Bilingual Content Program</h2>
+    <p class="project-desc">Built a 6-month content calendar for a SaaS startup targeting both US and LATAM markets — audience segmentation, topic research, and performance tracking baked in.</p>
+    <a href="#" class="project-link">View case study →</a>
+  </div>
+
+  <div class="project-card reveal">
+    <div class="project-tags">
+      <span class="project-tag">Python</span>
+      <span class="project-tag">Scikit-learn</span>
+      <span class="project-tag">Jupyter</span>
+    </div>
+    <h2 class="project-title">Churn Prediction Model</h2>
+    <p class="project-desc">Built a logistic regression model to identify at-risk subscribers for a subscription service. Reduced churn by surfacing early warning signals from behavioral data.</p>
+    <a href="#" class="project-link">View case study →</a>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════
+     FOOTER
+════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">@gilbertoesp</div>
+  <ul class="footer-links">
+    <li><a href="blog.html"      data-i18n="nav.blog"></a></li>
+    <li><a href="portfolio.html" data-i18n="nav.portfolio"></a></li>
+    <li><a href="material.html"  data-i18n="nav.material"></a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact"></a></li>
+  </ul>
+  <div class="footer-copy" data-i18n="footer.copy"></div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
