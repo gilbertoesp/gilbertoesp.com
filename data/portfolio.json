@@ -1,0 +1,37 @@
+[
+  {
+    "id": "sales-dashboard",
+    "title": "Sales Performance Dashboard",
+    "tags": ["Python", "Pandas", "Matplotlib"],
+    "description": "Automated monthly sales reporting for a retail SME — cleaned raw POS data, segmented by product category, and produced an executive-ready PDF with trend charts.",
+    "link": "#"
+  },
+  {
+    "id": "consulting-website",
+    "title": "Consulting Firm Website",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "description": "Designed and built a bilingual (EN/ES) landing page for a Hermosillo-based consultancy. Mobile-first, dark/light mode, and no frameworks — fast by default.",
+    "link": "#"
+  },
+  {
+    "id": "consumer-sentiment",
+    "title": "Consumer Sentiment Study",
+    "tags": ["Survey Design", "R", "SPSS"],
+    "description": "Designed and executed a 200-respondent survey for a food brand entering a new regional market. Delivered a full research report with actionable positioning recommendations.",
+    "link": "#"
+  },
+  {
+    "id": "bilingual-content-program",
+    "title": "Bilingual Content Program",
+    "tags": ["Content Strategy", "SEO", "Analytics"],
+    "description": "Built a 6-month content calendar for a SaaS startup targeting both US and LATAM markets — audience segmentation, topic research, and performance tracking baked in.",
+    "link": "#"
+  },
+  {
+    "id": "churn-prediction",
+    "title": "Churn Prediction Model",
+    "tags": ["Python", "Scikit-learn", "Jupyter"],
+    "description": "Built a logistic regression model to identify at-risk subscribers for a subscription service. Reduced churn by surfacing early warning signals from behavioral data.",
+    "link": "#"
+  }
+]

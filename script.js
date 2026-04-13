@@ -82,6 +82,18 @@ function applyTranslations(t, lang) {
       lang === 'en' ? 'Cambiar a español' : 'Switch to English');
   }
 
+  // Refresh blog filter labels if they were already rendered
+  const filterRow = document.getElementById('filter-row');
+  if (filterRow) {
+    filterRow.querySelectorAll('[data-filter]').forEach(btn => {
+      const tag = btn.dataset.filter;
+      const label = tag === 'all'
+        ? (t['blog.filter.all'] || 'All')
+        : t[`blog.filter.${tag}`] || (tag.charAt(0).toUpperCase() + tag.slice(1));
+      btn.textContent = label;
+    });
+  }
+
   // Persist
   localStorage.setItem('gilbertoesp_lang', lang);
   currentLang = lang;
@@ -153,22 +165,110 @@ if (submitBtn) {
 
 
 /* ════════════════════════════════════
-   BLOG FILTER (blog.html only)
+   DATA LOADERS — blog · portfolio · material
 ════════════════════════════════════ */
-const filterBtns = document.querySelectorAll('[data-filter]');
-if (filterBtns.length) {
-  const postCards = document.querySelectorAll('.post-card');
-  filterBtns.forEach(btn => {
+async function fetchData(path) {
+  const res = await fetch(path);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+function attachBlogFilter(filterRow, postsGrid) {
+  const btns = filterRow.querySelectorAll('[data-filter]');
+  const cards = postsGrid.querySelectorAll('.post-card');
+  btns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-
-      filterBtns.forEach(b => b.classList.remove('active'));
+      btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      postCards.forEach(card => {
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
         const match = filter === 'all' || card.dataset.category === filter;
         card.style.display = match ? '' : 'none';
       });
     });
   });
+}
+
+function renderBlog(posts) {
+  const filterRow = document.getElementById('filter-row');
+  const postsGrid = document.getElementById('posts-grid');
+  if (!filterRow || !postsGrid) return;
+
+  const t = translationCache[currentLang] || {};
+
+  const tags = ['all', ...new Set(posts.flatMap(p => p.tags))];
+  filterRow.innerHTML = tags.map((tag, i) => {
+    const label = tag === 'all'
+      ? (t['blog.filter.all'] || 'All')
+      : t[`blog.filter.${tag}`] || (tag.charAt(0).toUpperCase() + tag.slice(1));
+    return `<button class="filter-btn${i === 0 ? ' active' : ''}" data-filter="${tag}">${label}</button>`;
+  }).join('');
+
+  postsGrid.innerHTML = posts.map(post => `
+    <article class="post-card reveal" data-category="${post.tags[0]}">
+      <div class="post-meta">
+        <span class="post-date">${post.date}</span>
+        <span class="post-tag">${post.tags[0].charAt(0).toUpperCase() + post.tags[0].slice(1)}</span>
+      </div>
+      <h2 class="post-title">${post.title}</h2>
+      <p class="post-excerpt">${post.description}</p>
+      <a href="${post.link}" class="post-read">Read →</a>
+    </article>
+  `).join('');
+
+  postsGrid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  attachBlogFilter(filterRow, postsGrid);
+}
+
+function renderPortfolio(projects) {
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
+
+  grid.innerHTML = projects.map(project => `
+    <div class="project-card reveal">
+      <div class="project-tags">
+        ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+      </div>
+      <h2 class="project-title">${project.title}</h2>
+      <p class="project-desc">${project.description}</p>
+      <a href="${project.link}" class="project-link">View case study →</a>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}
+
+function renderMaterialSection(containerId, items) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const list = container.querySelector('.material-list');
+  if (!list) return;
+
+  list.innerHTML = items.map(item => `
+    <a href="${item.link}" class="material-item" rel="noopener noreferrer">
+      <div class="material-item-body">
+        <div class="material-item-title">${item.title}</div>
+        <div class="material-item-source">${item.source}</div>
+        <div class="material-item-note">${item.note}</div>
+      </div>
+      <span class="material-item-arrow">↗</span>
+    </a>
+  `).join('');
+}
+
+function renderMaterial(data) {
+  renderMaterialSection('material-reading', data.reading || []);
+  renderMaterialSection('material-tools',   data.tools   || []);
+  renderMaterialSection('material-talks',   data.talks   || []);
+}
+
+// Page detection and data loading
+if (document.getElementById('posts-grid')) {
+  fetchData('data/blog.json').then(data => { if (data) renderBlog(data); });
+}
+if (document.getElementById('projects-grid')) {
+  fetchData('data/portfolio.json').then(data => { if (data) renderPortfolio(data); });
+}
+if (document.getElementById('material-reading')) {
+  fetchData('data/material.json').then(data => { if (data) renderMaterial(data); });
 }

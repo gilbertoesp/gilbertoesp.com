@@ -1,0 +1,85 @@
+{
+  "reading": [
+    {
+      "id": "thinking-fast-slow",
+      "title": "Thinking, Fast and Slow",
+      "source": "Daniel Kahneman · Book",
+      "note": "The best mental model for understanding why data needs context and why intuition often misleads us.",
+      "link": "#"
+    },
+    {
+      "id": "visual-display",
+      "title": "The Visual Display of Quantitative Information",
+      "source": "Edward Tufte · Book",
+      "note": "Foundational for anyone who wants to communicate data clearly. Charts are arguments — make them honest ones.",
+      "link": "#"
+    },
+    {
+      "id": "shape-up",
+      "title": "Shape Up",
+      "source": "Ryan Singer / Basecamp · Free online",
+      "note": "A practical framework for scoping and shipping work without infinite backlogs. Applies beyond software teams.",
+      "link": "#"
+    },
+    {
+      "id": "everybody-lies",
+      "title": "Everybody Lies",
+      "source": "Seth Stephens-Davidowitz · Book",
+      "note": "What search data reveals that surveys never could. A reminder that the question you ask determines the answer you get.",
+      "link": "#"
+    }
+  ],
+  "tools": [
+    {
+      "id": "pandas-jupyter",
+      "title": "Pandas + Jupyter",
+      "source": "Python ecosystem · Free",
+      "note": "My primary stack for data cleaning, exploration, and analysis. Reproducible, versionable, and endlessly composable.",
+      "link": "#"
+    },
+    {
+      "id": "observable",
+      "title": "Observable",
+      "source": "observablehq.com · Free / Pro",
+      "note": "A notebook environment for data visualization in the browser. Great for shareable, interactive charts without a server.",
+      "link": "#"
+    },
+    {
+      "id": "tally",
+      "title": "Tally",
+      "source": "tally.so · Free / Pro",
+      "note": "The cleanest form builder I've found. No branding on the free tier, logic jumps, and integrations that actually work.",
+      "link": "#"
+    },
+    {
+      "id": "airtable",
+      "title": "Airtable",
+      "source": "airtable.com · Free / Pro",
+      "note": "Spreadsheet-database hybrid that works for small teams doing market research or content pipelines without a developer.",
+      "link": "#"
+    }
+  ],
+  "talks": [
+    {
+      "id": "beauty-of-data-viz",
+      "title": "The Beauty of Data Visualization",
+      "source": "David McCandless · TED · 18 min",
+      "note": "A compelling case that good visualization is not decoration — it's a form of knowledge compression.",
+      "link": "#"
+    },
+    {
+      "id": "misleading-graph",
+      "title": "How to Spot a Misleading Graph",
+      "source": "Lea Gaslowitz · TED-Ed · 5 min",
+      "note": "Short and essential. The ability to read charts critically is a core business literacy skill most people never develop.",
+      "link": "#"
+    },
+    {
+      "id": "humane-representation",
+      "title": "The Humane Representation of Thought",
+      "source": "Bret Victor · Media for Thinking the Unthinkable · 54 min",
+      "note": "A challenging and inspiring talk about how the tools we use shape what thoughts we can have. Relevant to anyone building with data.",
+      "link": "#"
+    }
+  ]
+}

@@ -7,29 +7,29 @@
 
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
-  --amber:      #f0a500;
-  --amber-dim:  #a87200;
+  --amber:      #FFBF00;
+  --amber-dim:  #cc9e00;
 
   /* LIGHT (default) */
-  --bg-page:    #f5f3ee;
-  --bg-section: #eae7df;
-  --bg-card:    #ffffff;
+  --bg-page:    #F3F8F2;
+  --bg-section: #E8EEE7;
+  --bg-card:    #fffff0;
   --border:     #d4cfc4;
-  --text:       #111016;
+  --text:       #1e2019;
   --muted:      #66635c;
 
-  --nav-bg:      rgba(245,243,238,0.94);
-  --nav-drawer:  rgba(245,243,238,0.99);
-  --hamburger:   #111016;
+  --nav-bg:      rgba(243,248,242,0.94);
+  --nav-drawer:  rgba(243,248,242,0.99);
+  --hamburger:   #1e2019;
 
-  --btn-secondary-color: #111016;
-  --btn-dark-bg:         #111016;
+  --btn-secondary-color: #1e2019;
+  --btn-dark-bg:         #1e2019;
   --btn-dark-color:      var(--amber);
-  --select-opt-bg:       #eae7df;
+  --select-opt-bg:       #E8EEE7;
 
-  --hero-grid-line:   rgba(160,140,40,0.08);
-  --hero-glow-color:  rgba(240,165,0,0.12);
-  --service-hover-bg: #f0ede4;
+  --hero-grid-line:   rgba(200,170,0,0.08);
+  --hero-glow-color:  rgba(255,191,0,0.12);
+  --service-hover-bg: #eaf0e9;
 
   --font-display: 'Syne', sans-serif;
   --font-body:    'Barlow Condensed', sans-serif;
@@ -42,25 +42,25 @@
 }
 
 [data-theme="dark"] {
-  --bg-page:    #07080d;
-  --bg-section: #0f1117;
-  --bg-card:    #14161e;
-  --border:     #1e2130;
+  --bg-page:    #061A40;
+  --bg-section: #071d4a;
+  --bg-card:    #0a2357;
+  --border:     #1a3a6b;
   --text:       #eef0f6;
-  --muted:      #6b7280;
+  --muted:      #8ba3c7;
 
-  --nav-bg:     rgba(7,8,13,0.92);
-  --nav-drawer: rgba(7,8,13,0.99);
+  --nav-bg:     rgba(6,26,64,0.94);
+  --nav-drawer: rgba(6,26,64,0.99);
   --hamburger:  #eef0f6;
 
   --btn-secondary-color: #eef0f6;
-  --btn-dark-bg:         #07080d;
+  --btn-dark-bg:         #061A40;
   --btn-dark-color:      var(--amber);
-  --select-opt-bg:       #0f1117;
+  --select-opt-bg:       #071d4a;
 
-  --hero-grid-line:   rgba(240,165,0,0.05);
-  --hero-glow-color:  rgba(240,165,0,0.09);
-  --service-hover-bg: #191c28;
+  --hero-grid-line:   rgba(255,191,0,0.05);
+  --hero-glow-color:  rgba(255,191,0,0.09);
+  --service-hover-bg: #0d2860;
 }
 
 /* ── GLOBAL ──────────────────────────────────────────────── */
@@ -126,9 +126,9 @@ body {
   transition:      background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 .btn-primary:hover {
-  background:  #ffc107;
+  background:  #ffd040;
   transform:   translateY(-2px);
-  box-shadow:  0 6px 20px rgba(240,165,0,0.28);
+  box-shadow:  0 6px 20px rgba(255,191,0,0.28);
 }
 
 .btn-secondary {
@@ -306,58 +306,46 @@ nav {
   pointer-events: none;
   transition:     background 0.35s ease;
 }
-.hero-content { position: relative; z-index: 1; max-width: 860px; }
+.hero-story {
+  position:    relative;
+  z-index:     1;
+  max-width:   860px;
+  width:       100%;
+}
 
-.hero-eyebrow {
+.hero-story__part {
+  padding-block-end: 2.8rem;
+  opacity: 0;
+}
+.hero-story__part--1 { animation: fadeUp 0.7s 0.2s forwards; }
+.hero-story__part--2 { animation: fadeUp 0.7s 0.45s forwards; }
+.hero-story__part--3 { animation: fadeUp 0.7s 0.7s forwards; }
+
+.hero-story__num {
   font-family:    var(--font-mono);
-  font-size:      0.78rem;
+  font-size:      0.72rem;
   letter-spacing: 0.16em;
   color:          var(--amber);
   text-transform: uppercase;
-  margin-bottom:  1.6rem;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.2s forwards;
+  margin-bottom:  0.6rem;
 }
-.hero-name {
-  font-family:    var(--font-display);
-  font-weight:    800;
-  font-size:      clamp(2.2rem, 9vw, 7rem);
-  line-height:    0.92;
-  letter-spacing: -0.045em;
-  margin-bottom:  0.3em;
-  color:          var(--text);
-  opacity: 0;
-  animation: fadeUp 0.7s 0.4s forwards;
-  transition: color 0.35s ease;
-}
-.hero-name .at  { color: var(--amber); }
-.hero-name .dim { color: var(--muted); }
 
-.hero-tagline {
+.hero-story__text {
   font-family: var(--font-display);
-  font-size:   clamp(1.15rem, 4vw, 1.9rem);
+  font-size:   clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
+  line-height: 1.65;
+  max-width:   65ch;
   color:       var(--text);
-  margin:      1.4rem 0 0.7rem;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.6s forwards;
-  transition: color 0.35s ease;
+  transition:  color 0.35s ease;
 }
-.hero-sub {
-  font-size:     1.05rem;
-  color:         var(--muted);
-  line-height:   1.85;
-  margin-bottom: 2.8rem;
-  max-width:     560px;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.75s forwards;
-}
+
 .hero-cta-row {
   display:   flex;
   gap:       1rem;
   flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.9s forwards;
+  opacity:   0;
+  animation: fadeUp 0.7s 0.95s forwards;
 }
 .hero-cta-row .btn-primary,
 .hero-cta-row .btn-secondary { width: 100%; text-align: center; }
@@ -869,11 +857,6 @@ footer {
   .hero-cta-row .btn-primary,
   .hero-cta-row .btn-secondary { width: auto; }
 
-  .about-wrap { max-width: 72ch; }
-
-  .services-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; }
-  .services-grid  { display: grid; grid-template-columns: 1fr 1fr; }
-
   .process-wrap { display: grid; grid-template-columns: 1fr 1fr; flex-direction: unset; }
   .process-step { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .process-step:nth-child(2n)  { border-right: none; }
@@ -904,11 +887,7 @@ footer {
   .hero        { padding-top: 10rem; }
   .hero-glow   { width: 700px; height: 700px; top: -200px; right: -200px; }
   .hero-grid-bg { background-size: 64px 64px; }
-  .hero-sub    { font-size: 1.15rem; }
-
-  .services-intro { gap: 4rem; }
-  .service-card { padding: 3rem 2.5rem; }
-  .service-title { font-size: 1.55rem; }
+  .hero-story__text { font-size: clamp(1.25rem, 2vw, 1.65rem); }
 
   .process-wrap { grid-template-columns: repeat(4, 1fr); }
   .process-step { border-right: 1px solid var(--border); border-bottom: none; }
@@ -929,5 +908,5 @@ footer {
    ══════════════════════════════════════════════════════════ */
 @media (min-width: 1280px) {
   :root { --section-px: 7rem; --section-py: 9rem; }
-  .hero-name { font-size: clamp(3rem, 8vw, 10rem); }
+  .hero-story__text { font-size: clamp(1.3rem, 1.8vw, 1.75rem); }
 }
