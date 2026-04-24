@@ -1,30 +1,30 @@
 [
   {
-    "id": "small-business-data",
-    "title": "Why most small businesses ignore their own data — and how to fix it",
-    "date": "2025-05-12",
-    "tags": ["data"],
-    "description": "You have more data than you think. The problem is rarely a lack of information; it's a lack of structure to make sense of it. Here's a simple framework to start.",
+    "id": "how-to-think",
+    "title": "¿Cómo cultivamos la sabiduría en un mundo donde el conocimiento está al alcance de todos?",
+    "date": "2023-08-14",
+    "tags": ["critical-thinking"],
+    "description": "En tiempos donde la inferencia completa las tareas por nosotros, desarrollar el pensamiento crítico es esencial para tomar decisiones informadas y eficientes.",
     "author": "Gilberto Espinoza",
-    "link": "#"
+    "link": "https://www.linkedin.com/pulse/cómo-cultivamos-la-sabiduría-en-un-mundo-donde-el-al-espinoza-maciel/?trackingId=x4O%2F1ARiQUCp4xjbmCrypg%3D%3D"
   },
   {
-    "id": "case-for-vanilla",
-    "title": "The case for vanilla: building fast websites without a framework",
-    "date": "2025-04-28",
-    "tags": ["web"],
-    "description": "Frameworks are tools, not requirements. Sometimes the clearest path to a performant, maintainable website is fewer dependencies and more intentionality.",
+    "id": "functional-security",
+    "title": "Importancia de la seguridad funcional",
+    "date": "2023-09-07",
+    "tags": ["security"],
+    "description": "La seguridad funcional es una práctica esencial para proteger nuestras aplicaciones y sistemas. Es la base de la seguridad de la información y la privacidad de los usuarios y clientes",
     "author": "Gilberto Espinoza",
-    "link": "#"
+    "link": "https://www.linkedin.com/pulse/importancia-de-la-seguridad-funcional-gilberto-espinoza-maciel/?trackingId=aM8vNK0VQJ%2BkkZYcxhcx8g%3D%3D"
   },
   {
-    "id": "bilingual-content",
-    "title": "Bilingual content isn't translation — it's a different conversation",
-    "date": "2025-04-10",
-    "tags": ["strategy"],
-    "description": "Translating your content word-for-word misses the point. Each language carries its own cultural register and audience expectations. Here's how I think about it.",
+    "id": "hugging-face",
+    "title": "Hugging Face. transformando la IA",
+    "date": "20203-09-08",
+    "tags": ["machine-learning"],
+    "description": "¿Conoces Hugging Face? Es una plataforma de IA que te permite entrenar modelos de machine learning de forma sencilla y eficiente. Te comparto mi experiencia explorando su plataforma y los proyectos que han realizado.",
     "author": "Gilberto Espinoza",
-    "link": "#"
+    "link": "https://www.linkedin.com/pulse/hugging-face-transformando-la-ia-gilberto-espinoza-maciel/?trackingId=aM8vNK0VQJ%2BkkZYcxhcx8g%3D%3D"
   },
   {
     "id": "descriptive-stats",

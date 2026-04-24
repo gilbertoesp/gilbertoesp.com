@@ -7,8 +7,8 @@
   "nav.portfolio": "Portfolio",
   "nav.material":  "Material",
 
-  "hero.story1": "Ten years ago I wrote my first Hello World. For a decade I explored the different layers of computer science, learning by doing and by failing. The answer I found was not some development stack. It was a way of seeing.",
-  "hero.story2": "Python and SQL are the languages in which I think through pipelines, embeddings and agents. TypeScript is the one I chose for this portfolio. What connects the three is not the tools themselves, but the philosophies that run through all of them: test-driven development and data-oriented architecture. Writing tests first forces you to think before you act. Designing around data forces you to understand the problem before choosing a solution.",
+  "hero.story1": "Ten years ago I wrote my first Hello World. For a decade I explored the different layers of computer science, doing and failing. The answer I found was not some development stack. It was a way of seeing.",
+  "hero.story2": "Python and SQL are the languages in which I work with notebooks, apps & agents. TypeScript is the one I chose for create in the web. What connects the three is the philosophies that run through all of them: test-driven development and data-oriented architecture.",
   "hero.story3": "I am an active member in Mexico's AI ecosystem, actively sharing knowledge, attending events, and working alongside communities that help more people and businesses take the step toward technological integration.",
   "hero.cta1":   "See my work",
   "hero.cta2":   "Let\u2019s talk",

@@ -42,25 +42,25 @@
 }
 
 [data-theme="dark"] {
-  --bg-page:    #061A40;
-  --bg-section: #071d4a;
-  --bg-card:    #0a2357;
-  --border:     #1a3a6b;
+  --bg-page:    #1e2019;
+  --bg-section: #1e2019;
+  --bg-card:    #1e2019;
+  --border:     #1e2019;
   --text:       #eef0f6;
   --muted:      #8ba3c7;
 
-  --nav-bg:     rgba(6,26,64,0.94);
-  --nav-drawer: rgba(6,26,64,0.99);
+  --nav-bg:     #1e2019;
+  --nav-drawer: #1e2019;
   --hamburger:  #eef0f6;
 
   --btn-secondary-color: #eef0f6;
-  --btn-dark-bg:         #061A40;
+  --btn-dark-bg:         #1e2019;
   --btn-dark-color:      var(--amber);
-  --select-opt-bg:       #071d4a;
+  --select-opt-bg:       #1e2019;
 
   --hero-grid-line:   rgba(255,191,0,0.05);
   --hero-glow-color:  rgba(255,191,0,0.09);
-  --service-hover-bg: #0d2860;
+  --service-hover-bg: #1e2019;
 }
 
 /* ── GLOBAL ──────────────────────────────────────────────── */

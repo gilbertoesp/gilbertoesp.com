@@ -7,8 +7,8 @@
   "nav.portfolio": "Portfolio",
   "nav.material":  "Material",
 
-  "hero.story1": "Hace diez años escribí mi primer Hello World. Durante una década exploré las distintas capas de las ciencias de la computación, aprendiendo haciendo y aprendiendo equivocándome. La respuesta que encontré no era algún stack de desarrollo. Era una forma de mirar.",
-  "hero.story2": "Python y SQL son los lenguajes en los que trabajo con datos: pipelines, embeddings, agentes. TypeScript es el que elegí para crear este portafolio. Lo que une a los tres no son las herramientas en sí, sino las filosofías que las atraviesan: desarrollo orientado a pruebas y arquitecturas centradas en datos",
+  "hero.story1": "Hace diez años escribí mi primer Hello World. Durante una década exploré las distintas capas de las ciencias de la computación, haciendo y equivocándome. La respuesta que encontré no fue un stack de desarrollo. Era una forma de mirar.",
+  "hero.story2": "Python y SQL son mi lenguajes en los que trabajo con datos: notebooks, apps & agentes. TypeScript es el que elegí para crear en la web. Lo que une a los tres, son las filosofías que las atraviesan: desarrollo orientado a pruebas y arquitecturas centradas en datos",
   "hero.story3": "Soy un participante activo en el ecosistema de IA en México: comparto conocimiento, asisto a eventos y formo parte de comunidades que buscan que más personas y empresas den el paso hacia la integración tecnológica.",
   "hero.cta1":   "Ver mi trabajo",
   "hero.cta2":   "Hablemos",
