@@ -5,28 +5,28 @@
       "title": "Thinking, Fast and Slow",
       "source": "Daniel Kahneman · Book",
       "note": "The best mental model for understanding why data needs context and why intuition often misleads us.",
-      "link": "#"
+      "link": "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555"
     },
     {
       "id": "visual-display",
       "title": "The Visual Display of Quantitative Information",
       "source": "Edward Tufte · Book",
       "note": "Foundational for anyone who wants to communicate data clearly. Charts are arguments — make them honest ones.",
-      "link": "#"
+      "link": "https://www.amazon.com/-/es/Visual-Display-Quantitative-Information-2nd/dp/0961392142/ref=sr_1_2?crid=3THNBVNEE5PV7&dib=eyJ2IjoiMSJ9.9-piwzRdp89fsdlGq8clUiHwQQ3_wl3IZ4_RilhPF9a3RNRiZPen4Zl57N340hyaFIsUYE8qEvXAHtawGII4DaRWROz3BWrz8iyGtOxVGZVwJH07MzXMOJO66OLAomg7m42OC8R-G-J9udRowK-ybBRJ8IoSFRS_PWhxQZ-yVSLV3JsdCxlhVpB44FcUN9-xbDBJehaYt3Mvh5C7utwRKdjmD2wz0T7BDidVOP17rmw.Y6Vn0XoeB6CSo4dOKeryWKqc01xM8IGyBvLeFw1443Y&dib_tag=se&keywords=the+visual+display+of+quantitative+information&qid=1777081107&s=books&sprefix=visual+display%2Cstripbooks-intl-ship%2C252&sr=1-2"
     },
     {
       "id": "shape-up",
       "title": "Shape Up",
       "source": "Ryan Singer / Basecamp · Free online",
       "note": "A practical framework for scoping and shipping work without infinite backlogs. Applies beyond software teams.",
-      "link": "#"
+      "link": "https://www.amazon.com/-/es/Shape-Up-Infinite-Possibilities-Shapes/dp/1584237988/ref=sr_1_1?__mk_es_US=ÅMÅŽÕÑ&crid=30GGZAGJO5LTQ&dib=eyJ2IjoiMSJ9.VOmXEnEpAsLP2eQrDgQO5wqP1kxaO6afSa69m1v62Xooc2LLvu6YKN_ndHOp-VXm3m0lQ2MwXkdNEB3Vh1W1UWk9QM88-fzMDx4wYuDrlx2pzOSwrBcUAt9iYR8mL8SO7OOlOy-7mb2YC4LP_3RFX1ap6bVv2DGfnK8iReocAKg4u9teRdXRq2IcF_PbfQ4okxJTmmJDX_Xb1wfUguSbMWeCrCPPhkBNnzNpBd0Nkjw.LSkG_LhoewacijKHHVtzXHDHJBD-0d9r7B3vT5yDNSk&dib_tag=se&keywords=shape+up&qid=1777081136&s=books&sprefix=shape+u%2Cstripbooks-intl-ship%2C263&sr=1-1"
     },
     {
       "id": "everybody-lies",
       "title": "Everybody Lies",
       "source": "Seth Stephens-Davidowitz · Book",
       "note": "What search data reveals that surveys never could. A reminder that the question you ask determines the answer you get.",
-      "link": "#"
+      "link": "https://www.amazon.com/-/es/Audible/dp/B06XCYD5KG/ref=sr_1_2?__mk_es_US=ÅMÅŽÕÑ&crid=3UPAE98BA99HK&dib=eyJ2IjoiMSJ9.oVmu3eZEkBhtTG6lZt8KiSCgFCX8iFrh7vJH0FRj_CyU6_LKfKK21BNKqHZD5Ou0AgeiteCtVIojErO7lGBVsanIOyRVEw0VXsofx4rFHdgE9NG55oW9_LLTafCpcdoh1dUgHHdig2huieu3087-ErpQItRWU3LZdJNCZCo-ZET9CroCGNU4OTHN5xJdgx3C7m-l-VZwrjoSJwsGwQPLSx4arL6TUhnILrtIM2PJfMQ.NoQjS8q-Z9EO9-Xmpk2GHEiq_AklE5KYK6fnImTXA2s&dib_tag=se&keywords=everybody+lies&qid=1777081160&s=books&sprefix=everybody+lie%2Cstripbooks-intl-ship%2C272&sr=1-2"
     }
   ],
   "tools": [
@@ -35,29 +35,8 @@
       "title": "Pandas + Jupyter",
       "source": "Python ecosystem · Free",
       "note": "My primary stack for data cleaning, exploration, and analysis. Reproducible, versionable, and endlessly composable.",
-      "link": "#"
+      "link": "https://docs.jupyter.org/en/latest/"
     },
-    {
-      "id": "observable",
-      "title": "Observable",
-      "source": "observablehq.com · Free / Pro",
-      "note": "A notebook environment for data visualization in the browser. Great for shareable, interactive charts without a server.",
-      "link": "#"
-    },
-    {
-      "id": "tally",
-      "title": "Tally",
-      "source": "tally.so · Free / Pro",
-      "note": "The cleanest form builder I've found. No branding on the free tier, logic jumps, and integrations that actually work.",
-      "link": "#"
-    },
-    {
-      "id": "airtable",
-      "title": "Airtable",
-      "source": "airtable.com · Free / Pro",
-      "note": "Spreadsheet-database hybrid that works for small teams doing market research or content pipelines without a developer.",
-      "link": "#"
-    }
   ],
   "talks": [
     {
