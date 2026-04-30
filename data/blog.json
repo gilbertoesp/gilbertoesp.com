@@ -88,14 +88,5 @@
     "description": "El álgebra lineal son los fundamentos con los que represntamos la realidad, los modelos, los textos, las identidades de los usuarios. Simplificando el a un producto punto el algoritmo de recomendacion de Tik Tok.",
     "author": "Gilberto Espinoza",
     "link": "https://www.linkedin.com/pulse/vectores-y-matrices-trabajando-en-you-tiktok-gilberto-espinoza-r49tf/?trackingId=KzR9vfupQvqV5XNbho3Hqw%3D%3D"
-  } //,
-  // {
-  //   "id": "css-custom-properties",
-  //   "title": "CSS custom properties changed how I think about design systems",
-  //   "date": "2025-02-14",
-  //   "tags": ["web"],
-  //   "description": "Once you internalize CSS variables as a design token layer, theming, consistency, and dark mode become trivially easy. Here's the mental model.",
-  //   "author": "Gilberto Espinoza",
-  //   "link": "#"
-  // }
+  } 
 ]
