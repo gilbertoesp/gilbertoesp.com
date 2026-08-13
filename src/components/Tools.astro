@@ -1,0 +1,21 @@
+---
+import { tools } from "../lib/constants";
+---
+
+<section id="stack" class="section">
+  <div class="container">
+    <p class="sec-label reveal"><span>//</span> 02 &mdash; Stack</p>
+    <h2 class="sec-title reveal">Current stack.</h2>
+
+    <div class="tools-list">
+      {tools.map((group) => (
+        <div class="tool-row reveal">
+          <span class="tool-row-label">{group.label}</span>
+          <div class="tool-row-items">
+            {group.items.map((item) => <span>{item}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+import { getLatestProjects } from "../lib/github";
+
+const projects = await getLatestProjects();
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <p class="sec-label reveal"><span>//</span> 01 &mdash; Projects</p>
+    <h2 class="sec-title reveal">Latest projects.</h2>
+
+    <div class="projects">
+      {projects.map((p) => (
+        <a class="project-card reveal" href={p.link} target="_blank" rel="noopener noreferrer">
+          <h3>{p.name}</h3>
+          <p class="project-desc">{p.description}</p>
+          <div class="project-tags">
+            {p.tags.map((t) => <span class="tag">{t}</span>)}
+          </div>
+          <span class="project-link">{p.link.replace(/^https?:\/\//, "")} &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
