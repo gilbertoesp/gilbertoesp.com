@@ -23,17 +23,20 @@ npm run check     # astro typecheck
 ```
 src/
   pages/index.astro      # landing page (hero, projects, stack, events, about, footer)
+  pages/blog.html.astro  # blog page → /blog.html
   components/            # Nav, Hero, Projects, Tools, Events, About, Footer
   layouts/BaseLayout.astro
   lib/
     constants.ts         # socials, stack, fallback projects, events
     github.ts            # build-time GitHub API fetch (falls back to constants)
+    blog.ts              # curated LinkedIn article list (typed)
   styles/global.css      # design tokens + styles
-public/                  # legacy pages served as-is (blog/portfolio/material + assets)
+public/                  # legacy pages served as-is (portfolio/material + assets)
 ```
 
-- **`/`** — new landing page (`src/pages/index.astro`)
-- **`/blog.html` `/portfolio.html` `/material.html`** — legacy pages preserved in `public/`
+- **`/`** — landing page (`src/pages/index.astro`)
+- **`/blog.html`** — built from `src/pages/blog.html.astro`; articles are a curated list of LinkedIn posts in `src/lib/blog.ts` (LinkedIn has no public API for personal-profile articles, so this list is updated manually)
+- **`/portfolio.html` `/material.html`** — legacy pages preserved in `public/`
 
 ## Deploy
 

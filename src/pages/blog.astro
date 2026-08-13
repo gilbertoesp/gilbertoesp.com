@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { posts, formatDate, tagLabels } from "../lib/blog";
+
+const title = "Blog — Gilberto Esp";
+const description = "Escritura e ideas de Gilberto Esp sobre datos, IA y tecnología.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Nav />
+  <main>
+    <div class="page-head section">
+      <div class="container">
+        <p class="sec-label reveal"><span>//</span> Blog</p>
+        <h1 class="sec-title reveal">Escritura &amp; ideas.</h1>
+        <p class="page-sub reveal">Notas sobre datos, tecnolog&iacute;a y construir cosas que tengan sentido.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="posts">
+          {posts.map((post) => (
+            <a
+              class="post-card reveal"
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="post-top">
+                <time class="post-date" datetime={post.date}>{formatDate(post.date)}</time>
+                <span class="post-source">LinkedIn &nearr;</span>
+              </div>
+              <h2>{post.title}</h2>
+              <p class="post-desc">{post.description}</p>
+              <div class="post-tags">
+                {post.tags.map((tag) => (
+                  <span class="post-tag">{tagLabels[tag] ?? tag}</span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
