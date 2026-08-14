@@ -230,6 +230,9 @@ button { font-family: inherit; }
 .project-card:hover .project-link { color: var(--text); }
 
 /* ── Tools & stack ───────────────────────────────────────── */
+.tools-section { position: relative; overflow: hidden; }
+.tools-content { position: relative; z-index: 1; }
+
 .tools-list { display: flex; flex-direction: column; gap: 2.25rem; }
 .tool-row { display: flex; flex-direction: column; gap: .5rem; }
 .tool-row-label {
@@ -241,6 +244,32 @@ button { font-family: inherit; }
 .tool-row-items { display: flex; flex-wrap: wrap; gap: .4rem 1.75rem; }
 .tool-row-items span { color: var(--tag); font-size: 1rem; transition: color .2s; }
 .tool-row-items span:hover { color: var(--accent); }
+
+.tool-logo {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  height: clamp(12rem, 55vh, 30rem);
+  max-width: 62%;
+  display: flex;
+  align-items: flex-end;
+  color: var(--tag);
+  filter: grayscale(1);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity .3s ease;
+}
+.tool-logo.active { opacity: .9; }
+.tool-logo svg { width: 100%; height: 100%; fill: currentColor; }
+.tool-logo img { width: 100%; height: 100%; object-fit: contain; }
+.tool-logo-mono {
+  font-size: clamp(4rem, 20vh, 9rem);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1;
+  color: var(--tag);
+}
 
 /* ── Events ──────────────────────────────────────────────── */
 .events-empty {

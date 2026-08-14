@@ -1,9 +1,13 @@
 ---
 import { tools } from "../lib/constants";
+import { getToolLogos } from "../lib/toolLogos";
+
+const logos = await getToolLogos();
+const logoEntries = Object.entries(logos);
 ---
 
-<section id="stack" class="section">
-  <div class="container">
+<section id="stack" class="section tools-section">
+  <div class="container tools-content">
     <p class="sec-label reveal"><span>//</span> 02 &mdash; Stack</p>
     <h2 class="sec-title reveal">Current stack.</h2>
 
@@ -18,4 +22,32 @@ import { tools } from "../lib/constants";
       ))}
     </div>
   </div>
+
+  <div class="tool-logos" aria-hidden="true">
+    {logoEntries.map(([name, html]) => (
+      <div class="tool-logo" data-logo={name} set:html={html} />
+    ))}
+  </div>
+
+  <script>
+    const section = document.getElementById("stack");
+    const items = document.querySelectorAll(".tool-row-items span");
+    const logos = document.querySelectorAll(".tool-logo");
+
+    if (section && items.length && logos.length) {
+      const byName = new Map<string, Element>();
+      logos.forEach((logo) => byName.set(logo.dataset.logo ?? "", logo));
+
+      const show = (name: string) => {
+        logos.forEach((logo) => logo.classList.remove("active"));
+        byName.get(name)?.classList.add("active");
+      };
+
+      items.forEach((el) => {
+        const name = el.textContent?.trim() ?? "";
+        el.addEventListener("mouseenter", () => show(name));
+      });
+      section.addEventListener("mouseleave", () => show(""));
+    }
+  </script>
 </section>
