@@ -21,7 +21,11 @@ const description = "Escritura e ideas de Gilberto Esp sobre datos, IA y tecnolo
 
     <section class="section">
       <div class="container">
-        <div class="posts">
+        <div class="sort-row reveal">
+          <button class="sort-toggle" id="sort-toggle" type="button">Newest first</button>
+        </div>
+
+        <div class="posts" id="posts">
           {posts.map((post) => (
             <a
               class="post-card reveal"
@@ -47,4 +51,23 @@ const description = "Escritura e ideas de Gilberto Esp sobre datos, IA y tecnolo
     </section>
   </main>
   <Footer />
+
+  <script>
+    const posts = document.getElementById("posts");
+    const toggle = document.getElementById("sort-toggle");
+    if (posts && toggle) {
+      let newestFirst = true;
+      toggle.addEventListener("click", () => {
+        newestFirst = !newestFirst;
+        const cards = Array.from(posts.querySelectorAll(".post-card"));
+        cards.sort((a, b) => {
+          const da = a.querySelector("time")?.getAttribute("datetime") ?? "";
+          const db = b.querySelector("time")?.getAttribute("datetime") ?? "";
+          return newestFirst ? db.localeCompare(da) : da.localeCompare(db);
+        });
+        cards.forEach((card) => posts.appendChild(card));
+        toggle.textContent = newestFirst ? "Newest first" : "Oldest first";
+      });
+    }
+  </script>
 </BaseLayout>

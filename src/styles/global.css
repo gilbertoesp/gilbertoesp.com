@@ -181,6 +181,23 @@ button { font-family: inherit; }
 }
 
 /* ── Blog ────────────────────────────────────────────────── */
+.sort-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+.sort-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .8rem;
+  color: var(--muted);
+  padding: .25rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: color .2s, border-color .2s;
+}
+.sort-toggle:hover { color: var(--text); border-bottom-color: var(--accent); }
+
 .mat-group + .mat-group { margin-top: 3.5rem; }
 .mat-title {
   font-size: .78rem;
