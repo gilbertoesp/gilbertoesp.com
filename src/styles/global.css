@@ -181,6 +181,16 @@ button { font-family: inherit; }
 }
 
 /* ── Blog ────────────────────────────────────────────────── */
+.mat-group + .mat-group { margin-top: 3.5rem; }
+.mat-title {
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
 .posts { display: flex; flex-direction: column; gap: 1.25rem; }
 .post-card {
   display: flex;
@@ -200,7 +210,8 @@ button { font-family: inherit; }
 }
 .post-date { font-size: .8rem; color: var(--muted); }
 .post-source { font-size: .8rem; color: var(--accent); font-weight: 600; }
-.post-card h2 {
+.post-card h2,
+.post-card h3 {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -.01em;

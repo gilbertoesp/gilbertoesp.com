@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { material } from "../lib/material";
+
+const groups = material.filter((group) => group.items.length > 0);
+
+const title = "Material — Gilberto Esp";
+const description =
+  "A curated library of papers, books, and other sources Gilberto Esp finds genuinely useful.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Nav />
+  <main>
+    <div class="page-head section">
+      <div class="container">
+        <p class="sec-label reveal"><span>//</span> Material</p>
+        <h1 class="sec-title reveal">A curated library.</h1>
+        <p class="page-sub reveal">
+          Papers, books, and other sources I find genuinely useful &mdash; curated, not algorithmic.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        {groups.map((group) => (
+          <div class="mat-group">
+            <h2 class="mat-title reveal">{group.label}</h2>
+            <div class="posts">
+              {group.items.map((item) => (
+                <a
+                  class="post-card reveal"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="post-top">
+                    <span class="post-date">{item.source}</span>
+                    <span class="post-source">Visit &nearr;</span>
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p class="post-desc">{item.note}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
