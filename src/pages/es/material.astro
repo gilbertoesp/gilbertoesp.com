@@ -1,16 +1,16 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
-import { material } from "../lib/material";
-import { translations } from "../lib/i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import { material } from "../../lib/material";
+import { translations } from "../../lib/i18n";
 
-const t = translations.en;
+const t = translations.es;
 const groups = material.filter((group) => group.items.length > 0);
 ---
 
-<BaseLayout title={t.meta.materialTitle} description={t.meta.materialDescription} lang="en" basePath="/material.html">
-  <Nav t={t} locale="en" basePath="/material.html" />
+<BaseLayout title={t.meta.materialTitle} description={t.meta.materialDescription} lang="es" basePath="/material.html">
+  <Nav t={t} locale="es" basePath="/material.html" />
   <main>
     <div class="page-head section">
       <div class="container">

@@ -1,19 +1,27 @@
 ---
 import { socials } from "../lib/constants";
+import type { Translation } from "../lib/i18n";
+
+interface Props {
+  t: Translation;
+}
+
+const { t } = Astro.props;
 ---
 
 <section class="hero container">
   <p class="hero-anchor fade" style="animation-delay: .05s">@gilbertoesp</p>
   <h1 class="hero-title fade" style="animation-delay: .15s">
-    AI Consultant &amp; Builder
+    {t.hero.title}
   </h1>
   <p class="hero-tag fade" style="animation-delay: .25s">
-    Building AI solutions for Spanish-speaking developers.
+    {t.hero.tagline}
   </p>
   <div class="hero-links fade" style="animation-delay: .35s">
-    <a class="link-primary" href={socials.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp for collabs</a>
+    <a class="link-primary" href={socials.whatsapp} target="_blank" rel="noopener noreferrer">{t.hero.whatsapp}</a>
     <a href={socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href={socials.github} target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href={socials.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href={socials.x} target="_blank" rel="noopener noreferrer">X</a>
   </div>
 </section>

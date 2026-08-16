@@ -13,8 +13,8 @@ export const tagLabels: Record<string, string> = {
   "machine-learning": "Machine Learning",
 };
 
-export function formatDate(iso: string): string {
-  return new Date(`${iso}T00:00:00`).toLocaleDateString("es-MX", {
+export function formatDate(iso: string, locale = "es-MX"): string {
+  return new Date(`${iso}T00:00:00`).toLocaleDateString(locale, {
     day: "numeric",
     month: "short",
     year: "numeric",

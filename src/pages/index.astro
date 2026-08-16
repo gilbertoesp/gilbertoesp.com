@@ -7,20 +7,19 @@ import Tools from "../components/Tools.astro";
 import Events from "../components/Events.astro";
 import About from "../components/About.astro";
 import Footer from "../components/Footer.astro";
+import { translations } from "../lib/i18n";
 
-const title = "Gilberto Esp | AI Consultant & Builder";
-const description =
-  "Helping Spanish-speaking developers navigate AI. Building real solutions.";
+const t = translations.en;
 ---
 
-<BaseLayout title={title} description={description}>
-  <Nav />
+<BaseLayout title={t.meta.indexTitle} description={t.meta.indexDescription} lang="en" basePath="/">
+  <Nav t={t} locale="en" basePath="/" />
   <main>
-    <Hero />
-    <Projects />
-    <Tools />
-    <Events />
-    <About />
+    <Hero t={t} />
+    <Projects t={t} />
+    <Tools t={t} />
+    <Events t={t} />
+    <About t={t} />
   </main>
-  <Footer />
+  <Footer t={t} />
 </BaseLayout>

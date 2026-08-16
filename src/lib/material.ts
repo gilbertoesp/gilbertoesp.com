@@ -6,9 +6,16 @@ export interface Resource {
   link: string;
 }
 
-export const material: { label: string; items: Resource[] }[] = [
+export type MaterialGroupKey = "papers" | "books" | "other";
+
+export interface MaterialGroup {
+  key: MaterialGroupKey;
+  items: Resource[];
+}
+
+export const material: MaterialGroup[] = [
   {
-    label: "Papers",
+    key: "papers",
     items: [
       // {
       //   id: "attention-is-all-you-need",
@@ -20,7 +27,7 @@ export const material: { label: string; items: Resource[] }[] = [
     ],
   },
   {
-    label: "Books",
+    key: "books",
     items: [
       {
         id: "thinking-fast-slow",
@@ -53,7 +60,7 @@ export const material: { label: string; items: Resource[] }[] = [
     ],
   },
   {
-    label: "Other sources",
+    key: "other",
     items: [
       {
         id: "beauty-of-data-viz",

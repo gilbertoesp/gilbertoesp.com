@@ -23,25 +23,32 @@ npm run check     # astro typecheck
 ```
 src/
   pages/
-    index.astro        # landing page (hero, projects, stack, events, about, footer)
-    blog.astro         # blog → /blog.html (Spanish)
-    material.astro     # curated library → /material.html (English)
-  components/          # Nav, Hero, Projects, Tools, Events, About, Footer
+    index.astro        # landing page → / (English, default locale)
+    blog.astro         # blog → /blog.html
+    material.astro     # curated library → /material.html
+    es/                # Spanish locale (→ /es.html, /es/blog.html, /es/material.html)
+  components/          # Nav, Flag, Hero, Projects, Tools, Events, About, Footer
   layouts/BaseLayout.astro
   lib/
+    i18n.ts            # locales (en/es active; zh/pt/fr reserved), translation dicts
     constants.ts       # socials, stack, fallback projects, events
     github.ts          # build-time GitHub API fetch (falls back to constants)
     blog.ts            # curated LinkedIn article list (typed)
     material.ts        # curated library resources (papers/books/sources)
     toolLogos.ts       # build-time brand logo fetch for stack hover watermarks
   styles/global.css    # design tokens + styles
-public/                # robots.txt + portfolio.html → "/" redirect stub
+public/                # robots.txt, portfolio.html → "/" stub, es/index.html → /es.html stub
 ```
 
-- **`/`** — landing page
+- **`/`** — landing page (English)
 - **`/blog.html`** — curated list of LinkedIn articles from `src/lib/blog.ts` (LinkedIn has no public API for personal-profile articles, so the list is updated manually)
 - **`/material.html`** — curated papers/books/sources from `src/lib/material.ts`
+- **`/es/`** (served by `/es.html`) — the whole site in Spanish; toggle in the nav switches each page between languages
 - **`/portfolio.html`** — static noindex redirect to `/` (page removed; projects live on the landing)
+
+## Languages
+
+The nav has a flag switcher. English is the default locale at `/`; Spanish lives under `/es/`. `src/lib/i18n.ts` defines the locales (Chinese, Portuguese, French are declared but not built yet — implement `src/pages/zh/`, `pt/`, `fr/` and flip their `implemented` flag when ready). All page chrome copy comes from typed translation dicts; blog posts and material resources are shared across languages (their notes stay in their own language).
 
 ## Deploy
 
@@ -55,4 +62,4 @@ Vercel (recommended): connect repo, framework preset **Astro**, build command `n
 
 ## Content
 
-Edit copy directly in the `.astro` components. Update contact links and the stack list in `src/lib/constants.ts`. The `events` array there is empty by design; `material.ts` Papers section is empty by design.
+Edit page chrome copy in `src/lib/i18n.ts` (per-language `Translation` dicts). Update contact links and the stack list in `src/lib/constants.ts`. The `events` array there is empty by design; `material.ts` Papers section is empty by design.

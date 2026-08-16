@@ -1,15 +1,15 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
-import { posts, formatDate } from "../lib/blog";
-import { translations } from "../lib/i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import { posts, formatDate } from "../../lib/blog";
+import { translations } from "../../lib/i18n";
 
-const t = translations.en;
+const t = translations.es;
 ---
 
-<BaseLayout title={t.meta.blogTitle} description={t.meta.blogDescription} lang="en" basePath="/blog.html">
-  <Nav t={t} locale="en" basePath="/blog.html" />
+<BaseLayout title={t.meta.blogTitle} description={t.meta.blogDescription} lang="es" basePath="/blog.html">
+  <Nav t={t} locale="es" basePath="/blog.html" />
   <main>
     <div class="page-head section">
       <div class="container">
@@ -40,7 +40,7 @@ const t = translations.en;
               rel="noopener noreferrer"
             >
               <div class="post-top">
-                <time class="post-date" datetime={post.date}>{formatDate(post.date, "en-US")}</time>
+                <time class="post-date" datetime={post.date}>{formatDate(post.date, "es-MX")}</time>
                 <span class="post-source">LinkedIn &nearr;</span>
               </div>
               <h2>{post.title}</h2>

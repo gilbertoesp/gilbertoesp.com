@@ -1,20 +1,26 @@
 ---
 import { tools } from "../lib/constants";
 import { getToolLogos } from "../lib/toolLogos";
+import type { Translation } from "../lib/i18n";
 
+interface Props {
+  t: Translation;
+}
+
+const { t } = Astro.props;
 const logos = await getToolLogos();
 const logoEntries = Object.entries(logos);
 ---
 
 <section id="stack" class="section tools-section">
   <div class="container tools-content">
-    <p class="sec-label reveal"><span>//</span> 02 &mdash; Stack</p>
-    <h2 class="sec-title reveal">Current stack.</h2>
+    <p class="sec-label reveal"><span>//</span> {t.sections.stackLabel}</p>
+    <h2 class="sec-title reveal">{t.sections.stackTitle}</h2>
 
     <div class="tools-list">
       {tools.map((group) => (
         <div class="tool-row reveal">
-          <span class="tool-row-label">{group.label}</span>
+          <span class="tool-row-label">{t.tools[group.label] ?? group.label}</span>
           <div class="tool-row-items">
             {group.items.map((item) => <span>{item}</span>)}
           </div>

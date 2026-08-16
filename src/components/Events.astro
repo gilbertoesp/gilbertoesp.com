@@ -1,15 +1,22 @@
 ---
 import { socials } from "../lib/constants";
+import type { Translation } from "../lib/i18n";
+
+interface Props {
+  t: Translation;
+}
+
+const { t } = Astro.props;
 ---
 
 <section id="events" class="section">
   <div class="container">
-    <p class="sec-label reveal"><span>//</span> 03 &mdash; Events</p>
-    <h2 class="sec-title reveal">Events &amp; speaking.</h2>
+    <p class="sec-label reveal"><span>//</span> {t.sections.eventsLabel}</p>
+    <h2 class="sec-title reveal">{t.sections.eventsTitle}</h2>
 
     <div class="events-empty reveal">
-      <p>Open to conferences, workshops, and community talks. Coming events will appear here.</p>
-      <a href={socials.whatsapp} target="_blank" rel="noopener noreferrer">For collaboration inquiries &rarr;</a>
+      <p>{t.events.empty}</p>
+      <a href={socials.whatsapp} target="_blank" rel="noopener noreferrer">{t.events.collab}</a>
     </div>
   </div>
 </section>

@@ -1,16 +1,75 @@
 ---
+import { implementedLocales, localizedHref, type Locale, type Translation } from "../lib/i18n";
+import Flag from "./Flag.astro";
+
+interface Props {
+  t: Translation;
+  locale: Locale;
+  basePath: string;
+}
+
+const { t, locale, basePath } = Astro.props;
 ---
 
 <header class="nav">
-  <a class="nav-logo" href="/"><span>@</span>gilbertoesp</a>
+  <a class="nav-logo" href={localizedHref(locale, "/")}><span>@</span>gilbertoesp</a>
   <nav aria-label="Primary">
     <ul class="nav-links" id="nav-links">
-      <li><a href="/blog.html">Blog</a></li>
-      <li><a href="/material.html">Material</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href={localizedHref(locale, "/blog.html")}>{t.nav.blog}</a></li>
+      <li><a href={localizedHref(locale, "/material.html")}>{t.nav.material}</a></li>
+      <li><a href="#contact">{t.nav.contact}</a></li>
     </ul>
   </nav>
-  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+  <div class="nav-lang" id="nav-lang">
+    <button
+      class="lang-trigger"
+      id="lang-trigger"
+      type="button"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label={t.nav.languageLabel}
+    >
+      <Flag code={locale} />
+      <svg class="lang-chevron" width="8" height="6" viewBox="0 0 8 6" aria-hidden="true">
+        <path d="M1 1l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <ul class="lang-list" id="lang-list">
+      {implementedLocales.map((l) => (
+        <li>
+          <a href={localizedHref(l.code, basePath)} class={l.code === locale ? "active" : ""} lang={l.lang}>
+            <Flag code={l.code} />
+            <span>{l.name}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label={t.nav.menuLabel} aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
+
+<script>
+  const lang = document.getElementById("nav-lang");
+  const trigger = document.getElementById("lang-trigger");
+  if (lang && trigger) {
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = lang.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", (e) => {
+      if (!lang.contains(e.target as Node)) {
+        lang.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        lang.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>

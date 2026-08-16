@@ -1,22 +1,27 @@
 ---
+import type { Translation } from "../lib/i18n";
+
+interface Props {
+  t: Translation;
+}
+
+const { t } = Astro.props;
 ---
 
 <section id="about" class="section">
   <div class="container">
-    <p class="sec-label reveal"><span>//</span> 04 &mdash; About</p>
-    <h2 class="sec-title reveal">About.</h2>
+    <p class="sec-label reveal"><span>//</span> {t.sections.aboutLabel}</p>
+    <h2 class="sec-title reveal">{t.sections.aboutTitle}</h2>
 
-    <p class="about-mission reveal">AI Without Overwhelm.</p>
+    <p class="about-mission reveal">{t.about.mission}</p>
     <p class="about-body reveal">
-      I help Spanish-speaking developers navigate AI and machine learning without
-      the hype. Ten years building in public. No formal degree. Real projects,
-      real learning.
+      {t.about.body}
     </p>
 
     <div class="about-meta reveal">
-      <span><strong>Currently:</strong> AI Consultant &amp; Developer</span>
-      <span><strong>Location:</strong> Sonora, M&eacute;xico</span>
-      <span><strong>Languages:</strong> Espa&ntilde;ol &amp; English</span>
+      <span><strong>{t.about.currently}</strong> {t.about.currentlyValue}</span>
+      <span><strong>{t.about.location}</strong> {t.about.locationValue}</span>
+      <span><strong>{t.about.languages}</strong> {t.about.languagesValue}</span>
     </div>
   </div>
 </section>
