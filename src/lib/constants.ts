@@ -3,6 +3,7 @@ export const socials = {
   linkedin: "https://linkedin.com/in/gilbertoesp",
   github: "https://github.com/gilbertoesp",
   instagram: "https://instagram.com/gilbertoesp.dev",
+  x: "https://x.com/gilbertoesp_mx",
 };
 
 export const githubUser = "gilbertoesp";
